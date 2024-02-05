@@ -41,9 +41,15 @@
   //handle transaction submitted
   const handleTransactionSubmitted = (transactionData) => {
     transaction.value.push({
+      id: generateUniqueID(),
       text: transactionData.text,
       amount: transaction.amount,
     })
+  }
+
+  //generate unique id
+  const generateUniqueID = () => {
+    return Math.floor(Math.random() * 1000000)
   }
 
 </script>
